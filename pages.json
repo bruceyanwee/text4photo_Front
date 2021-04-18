@@ -10,10 +10,7 @@
 		{
 		    "path" : "pages/discovery/discovery",
 		    "style" :                                                                                    
-		    {	
-				"app-plus":{
-				"titleNView": false
-				}, 
+		    {					
 		        "navigationBarTitleText": "Text4photo_CCNU",
 		        "enablePullDownRefresh": true		    
 		    }
@@ -23,9 +20,6 @@
             "path" : "pages/take_photo/take_photo",
             "style" :                                                                                    
             {
-				"app-plus":{
-				"titleNView": false
-				}, 
                 "navigationBarTitleText": "Text4photo_CCNU",
                 "enablePullDownRefresh": false
 				
@@ -63,9 +57,7 @@
             "path" : "pages/RcText4Photo/RcText4Photo",
             "style" :                                                                                    
             {
-				"app-plus":{
-				"titleNView": false
-				}, 
+				 
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
@@ -74,10 +66,7 @@
 		{
 		    "path" : "pages/me/me",
 		    "style" :                                                                                    
-		    {
-				"app-plus":{
-				"titleNView": false
-				}, 
+		    {				
 		        "navigationBarTitleText": "Text4photo_CCNU",
 		        "enablePullDownRefresh": false
 		    }

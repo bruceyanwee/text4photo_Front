@@ -14,7 +14,9 @@
 				<swiper-item :key="'p_'+i">
 					<view :class="['swiper-item',bigIdx === i ? 'big' : 'small']" :style="{background:p.bg,'box-shadow':p.shadow}">
 						<image class="img" :src="p.icon"></image>
-						<text class="title">{{p.title}}</text>
+						<navigator :url="p.page_url">
+							<text class="title">{{p.title}}</text>
+						</navigator>						
 						<text class="sub_title">{{p.subTitle}}</text>
 					</view>
 				</swiper-item>
@@ -69,19 +71,22 @@
 					shadow: '0px 3px 12px 0px rgba(195,164,110,0.23)',
 					title: '拍照偏好',
 					icon:'/static/photo_prefer.png',
-					subTitle: '根据你的拍照习惯形成的拍照偏好'
+					subTitle: '根据你的拍照习惯形成的拍照偏好',
+					page_url:'../vis_photograph/vis_photograph'
 				}, {
 					bg: 'linear-gradient(94deg,rgba(150,147,168,1),rgba(150,147,164,1))',
 					shadow: '0px 3px 12px 0px rgba(195,164,110,0.23)',
 					title: '配文偏好',
 					icon:'/static/baogao.png',
-					subTitle: '根据你的配文习惯形成的配文偏好'
+					subTitle: '根据你的配文习惯形成的配文偏好',
+					page_url:'../vis_text_use/vis_text_use',
 				}, {
 					bg: 'linear-gradient(94deg,rgba(150,147,168,1),rgba(150,147,164,1))',
 					shadow: '0px 3px 12px 0px rgba(195,164,110,0.23)',
 					title: '情感偏好',
 					icon:'/static/sentiment_prefer.png',
-					subTitle: '根据你的历史图文形成的情感偏好'
+					subTitle: '根据你的历史图文形成的情感偏好',
+					page_url:'../vis_sentiment/vis_sentiment'
 				}],
 				tasks: [{
 						icon: '/static/photo_fangpai.png',
