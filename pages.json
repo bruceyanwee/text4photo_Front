@@ -1,0 +1,167 @@
+{
+	"easycom": {
+	        // 下载安装的方式需要前面的"@/"，npm安装的方式无需"@/"
+	        // 下载安装方式
+	        "^u-(.*)": "@/uview-ui/uview-ui/components/u-$1/u-$1.vue"
+	        // npm安装方式
+	        // "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	    },
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages		
+		{
+		    "path" : "pages/discovery/discovery",
+		    "style" :                                                                                    
+		    {	
+				"app-plus":{
+				"titleNView": false
+				}, 
+		        "navigationBarTitleText": "Text4photo_CCNU",
+		        "enablePullDownRefresh": true		    
+		    }
+		    
+		}		
+        ,{
+            "path" : "pages/take_photo/take_photo",
+            "style" :                                                                                    
+            {
+				"app-plus":{
+				"titleNView": false
+				}, 
+                "navigationBarTitleText": "Text4photo_CCNU",
+                "enablePullDownRefresh": false
+				
+            }
+            
+        },
+        {
+            "path" : "pages/RcSimPhoto/RcSimPhoto",
+            "style" :                                                                                    
+            {				
+                "navigationBarTitleText": "Text4photo_CCNU",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/RcPhotoCourse/RcPhotoCourse",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "Text4photo_CCNU",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/RcPhotoTheory/RcPhotoTheory",
+            "style" :                                                                                    
+            {				
+                "navigationBarTitleText": "Text4photo_CCNU",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/RcText4Photo/RcText4Photo",
+            "style" :                                                                                    
+            {
+				"app-plus":{
+				"titleNView": false
+				}, 
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/me/me",
+		    "style" :                                                                                    
+		    {
+				"app-plus":{
+				"titleNView": false
+				}, 
+		        "navigationBarTitleText": "Text4photo_CCNU",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/login/code",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/vis_photograph/vis_photograph",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vis_text_use/vis_text_use",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/vis_sentiment/vis_sentiment",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/web_view_show/web_view_show",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",		
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{
+		"color":"#2C405A",		
+		"backgroundColor":"#F1F1F1",
+		"list":[
+			{
+				"pagePath":"pages/discovery/discovery",		
+				"iconPath":"static/index_faxian.png",
+				"selectedIconPath":"static/index_faxian2.png"
+			},
+			{
+				"pagePath":"pages/take_photo/take_photo",				
+				"iconPath":"static/index_fabu2.png",
+				"selectedIconPath":"static/index_logo.png"
+			},
+			{
+				"pagePath":"pages/me/me",				
+				"iconPath":"static/me2.png",
+				"selectedIconPath":"static/me1.png"
+			}
+		]
+	}
+}
