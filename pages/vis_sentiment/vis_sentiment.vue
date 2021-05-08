@@ -1,10 +1,11 @@
 <template>
 	<view class="page">		
 		<text class="title">用户情感偏好可视化</text>					
+		<!-- 情感雷达图的显示 -->
 		<view class="charts-box">
 		  <qiun-data-charts
-		    type="pie"
-		    :chartData="chartData_pie"
+		    type="radar"
+		    :chartData="chartData_radar"
 		    background="none"
 		    :animation="true"
 		  />
@@ -25,15 +26,15 @@
 		</view>
 		<view class="tag_area">			
 			<view class="top_scenes">
-				<u-button type="primary" size="medium" class="custom-style" style="width: 150rpx;margin: 10px;">常拍景物:</u-button>
+				<u-button type="primary" size="medium" class="custom-style" style="width: 150rpx;margin: 10px;">照片情感:</u-button>
 				<u-tag shape="circle" :text="tag.name" type="success" style="margin-left: 3px;" v-for="tag in top_scenes"/>
 			</view>
 			<view class="top_topics">
-				<u-button type="success" size="medium" class="custom-style" style="width: 150rpx;margin: 10px;">爱拍主题:</u-button>
+				<u-button type="success" size="medium" class="custom-style" style="width: 150rpx;margin: 10px;">配文情感:</u-button>
 				<u-tag shape="circle" :text="tag.name" type="warning" style="margin-left: 3px;" v-for="tag in top_topics"/>
 			</view>
 			<view class="top_emotions">
-				<u-button type="warning" size="medium" class="custom-style" style="width: 150rpx;margin: 10px;">情感偏好:</u-button>
+				<u-button type="warning" size="medium" class="custom-style" style="width: 150rpx;margin: 10px;">多模态情感:</u-button>
 				<u-tag shape="circle" :text="tag.name" type="primary" style="margin-left: 3px;" v-for="tag in top_emotions"/>
 			</view>
 		</view>
@@ -46,22 +47,18 @@
 			return {
 				top_scenes:[
 					{
-						name:"路灯",
+						name:"愉快",
 					},{
-						name:"狗",
+						name:"敬畏",
 					},
 					{
-						name:"公路"
+						name:"有趣"
 					}],
 				top_topics:[
 					{
-						name:'夜景',
+						name:'满足',
 					},{
-						name:'风光人像'	
-					},{
-						name:'微距'
-					},{
-						name:'旅游摄影'
+						name:'悲伤'	
 					}],
 				top_emotions:[
 					{
@@ -70,59 +67,81 @@
 						name:'满足'
 					}
 				],
-				chartData:{
-				  categories: ["2016", "2017", "2018", "2019", "2020", "2021"],
-				  series: [{
-				    name: "目标值",
-				    data: [35, 36, 31, 33, 13, 34]
-				  }, {
-				    name: "完成量",
-				    data: [18, 27, 21, 24, 6, 28]
-				  }]
+				chartData_radar:{
+					"categories": [
+						"有趣",
+						"敬畏",
+						"愉快",
+						"满足",
+						"愤怒",
+						"恶心",
+						"恐怖",
+						"悲伤",
+					],
+					"series": [
+						{
+							"name": "图像情感",
+							"data": [
+								90,
+								110,
+								165,
+								195,
+								187,
+								172,
+								122,
+								143,
+							]
+						},
+						{
+							"name": "文本情感",
+							"data": [
+								190,
+								210,
+								105,
+								35,
+								27,
+								102,
+								132,
+								91,
+							]
+						},
+						{
+							"name": "多模态情感",
+							"data": [
+								150,
+								165,
+								125,
+								165,
+								87,
+								122,
+								112,
+								120,
+							]
+						}
+					]
 				},
 				chartData_WC:{
 				  categories:[],
 				  series:[
 					   {
-						  "name": "马路",
+						  "name": "有趣",
 						  "textSize": 25
 					   },{
-						  "name": "金毛",
+						  "name": "悲伤",
 						  "textSize": 40
 					   },{
-						  "name": "樱花",
+						  "name": "敬畏",
 						  "textSize": 21
 					   },{
-						  "name": "宠物",
-						  "textSize": 14
-					   },{
-						  "name": "室外",
-						  "textSize": 3
-					   },{
-						  "name": "银杏",
-						  "textSize": 15
-					   },{
-						  "name": "月亮",
-						  "textSize": 20
-					   },{
-						  "name": "夜景",
-						  "textSize": 27
-					   },{
-						  "name": "云",
-						  "textSize": 29
-					   },{
-						  "name": "树叶",
-						  "textSize": 22
-					   },{
-						  "name": "汽车",
-						  "textSize": 21
-					   },{
-						  "name": "湖边",
+						  "name": "恐怖",
 						  "textSize": 9
 					   },{
-						  "name": "花朵",
+						  "name": "愉快",
 						  "textSize": 13
-					   },
+					   },{
+						  "name": "满足",
+						  "textSize": 29
+					   }					   
 				  ],
 				},
 				chartData_pie:{
